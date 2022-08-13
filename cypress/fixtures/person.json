@@ -1,5 +1,6 @@
 {
   "name": "Bob Marley",
-  "gender": "Male"
-  
+  "gender": "Male",
+  "productName": ["Blackberry","Nokia Edge"],
+  "address": "Bangladesh"
 }

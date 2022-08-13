@@ -5,6 +5,11 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl:"https://rahulshettyacademy.com/angularpractice/"
+    baseUrl:"https://rahulshettyacademy.com/angularpractice/",
+    defaultCommandTimeout : 8000,
+    pageLoadTimeout : 10000
   },
+  env :{
+    //Custom enviromnet variable here
+  }
 });
