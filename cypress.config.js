@@ -2,9 +2,10 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   projectId: 'mj5izw',
-  reporter:"cypress-mochawesome-reporter",
+  reporter: 'mochawesome',
   reporterOptions: {
     charts: true,
+    hml: true,
     reportPageTitle: 'Cypress Automation Report',
     embeddedScreenshots: true,
     inlineAssets: true,
@@ -20,5 +21,13 @@ module.exports = defineConfig({
   },
   env :{
     //Custom enviromnet variable here
+  },
+  retries:{
+    //tries agian on failure while run
+    runMode:1,
+    //tries again in gui 
+    openMode:1
+    
   }
+  
 });
