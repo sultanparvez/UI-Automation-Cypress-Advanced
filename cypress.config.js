@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const cucumber = require('cypress-cucumber-preprocessor').default
 
 module.exports = defineConfig({
   projectId: 'mj5izw',
@@ -13,8 +14,9 @@ module.exports = defineConfig({
   },
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      on('file:preprocessor', cucumber())
     },
+    specPattern: "cypress/integration/BDD/*.feature",
     baseUrl:"https://rahulshettyacademy.com/angularpractice/",
     defaultCommandTimeout : 8000,
     pageLoadTimeout : 10000
@@ -26,7 +28,7 @@ module.exports = defineConfig({
     //tries agian on failure while run
     runMode:1,
     //tries again in gui 
-    openMode:1
+    openMode:0
     
   }
   
