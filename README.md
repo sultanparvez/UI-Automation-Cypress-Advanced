@@ -13,4 +13,6 @@ npm test
 
 ## Included
 * cypress,
-* cypress-mochawesome-reporter
+* mochawesome-reporter
+* cucumber
+* multiple-cucumber-html-reporter
